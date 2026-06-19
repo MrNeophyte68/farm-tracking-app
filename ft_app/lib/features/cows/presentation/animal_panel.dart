@@ -20,14 +20,14 @@ class _AnimalPanelState extends State<AnimalPanel> {
   final List<Map<String, dynamic>> _cows = [];
   final TextEditingController _searchController = TextEditingController();
   
-  final String _apiUrl = 'http://localhost:5000/api/cows';
+  final String _apiUrl = 'https://farm-tracking-app.onrender.com/api/cows';
   bool _hasLoadedInitialData = false;
 
   @override
   void initState() {
     super.initState();
     _channel = WebSocketChannel.connect(
-      Uri.parse('ws://localhost:5000'),
+      Uri.parse('wss://farm-tracking-app.onrender.com'),
     );
 
     _channel.stream.listen(

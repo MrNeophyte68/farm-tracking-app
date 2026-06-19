@@ -213,7 +213,7 @@ void showRegisterCowSheet(BuildContext context, Locale currentLocale) {
                       if (earTag.isEmpty) return;
 
                       try {
-                        final url = Uri.parse('http://localhost:5000/api/cows'); //10.0.2.2 on android emulator and localhost on web
+                        final url = Uri.parse('https://farm-tracking-app.onrender.com/api/cows'); //10.0.2.2 on android emulator and localhost on web
                         final response = await http.post(
                           url,
                           headers: {"Content-Type": "application/json"},
